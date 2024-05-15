@@ -2,7 +2,7 @@
 
 use App\Http\Controllers\SeriesController;
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\QueryBuilderController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -28,7 +28,8 @@ Route::get('produto/{id}/{nome}', function($id, $nome){
     return "produto {$id}, nome {$nome}";
 });
 
-Route::get('query-builder', 'QueryBuilderController@tests');
+Route::get('query-builder', [QueryBuilderController::class, 'tests']);
+// Route::get('query-builder', 'QueryBuilderController@tests');
 
 Route::get('users', function(){
   return DB::table('users')->get();
