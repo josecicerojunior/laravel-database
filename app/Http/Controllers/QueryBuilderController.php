@@ -25,11 +25,14 @@ class QueryBuilderController extends Controller
             //             dd($insere);
                 
             // Atualiazação
-                $update = DB::table('users')->where('email','matheus.fellipe@mail.com')->update([
-                    'name' => 'Name update',
-                    'email' => 'mail-update@email.com'
-                ]);
-                dd($update);
+                // $update = DB::table('users')->where('email','matheus.fellipe@mail.com')->update([
+                //     'name' => 'Name update',
+                //     'email' => 'mail-update@email.com'
+                // ]);
+      
+            
+            // Delete apagando o ID = 3
+            $delete = DB::table('users')->where('id', '3')->delete();
         }
 
     }         
