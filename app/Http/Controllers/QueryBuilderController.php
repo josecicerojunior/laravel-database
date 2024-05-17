@@ -15,15 +15,21 @@ class QueryBuilderController extends Controller
             // dd(DB::table('users')->get());
         
             // Inserindo registro no banco de dados
-            $insere = DB::table('users')->insert([
-                            [
-                            'name' => 'Matheus Fellipe',
-                            'email' => 'matheus.fellipe@mail.com',
-                            'password' => bcrypt('123456')
-                            ],
-                        ]);
-                        dd($insere);
-    
+            // $insere = DB::table('users')->insert([
+            //                 [
+            //                 'name' => 'Matheus Fellipe',
+            //                 'email' => 'matheus.fellipe@mail.com',
+            //                 'password' => bcrypt('123456')
+            //                 ],
+            //             ]);
+            //             dd($insere);
+                
+            // Atualiazação
+                $update = DB::table('users')->where('email','matheus.fellipe@mail.com')->update([
+                    'name' => 'Name update',
+                    'email' => 'mail-update@email.com'
+                ]);
+                dd($update);
         }
 
     }         
