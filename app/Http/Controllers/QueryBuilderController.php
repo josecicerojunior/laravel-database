@@ -33,8 +33,16 @@ class QueryBuilderController extends Controller
             
             // Delete apagando o ID = 3
             $delete = DB::table('users')->where('id', '3')->delete();
-        }
 
+        
+
+        }
+        // Realizando consulta no banco usando a faça
+        public function consulta(){
+        // return DB::table('users')->select('id', 'name', 'email')->get(); 
+        // Utilizando o método pluck para realizar consultas.
+            return DB::table('users')->pluck('name');
+        }
     }         
 
         

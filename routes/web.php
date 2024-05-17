@@ -29,6 +29,7 @@ Route::get('produto/{id}/{nome}', function($id, $nome){
 });
 
 Route::get('query-builder', [QueryBuilderController::class, 'tests']);
+Route::get('consulta', [QueryBuilderController::class, 'consulta']);
 
 // Route::get('query-builder', 'QueryBuilderController@tests');
 
