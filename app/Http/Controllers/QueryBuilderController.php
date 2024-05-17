@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use DB;
+use Illuminate\Support\Facades\DB as FacadesDB;
+
 class QueryBuilderController extends Controller
 
     {
@@ -41,8 +43,11 @@ class QueryBuilderController extends Controller
         public function consulta(){
         // return DB::table('users')->select('id', 'name', 'email')->get(); 
         // Utilizando o método pluck para realizar consulta.
-            return DB::table('produtos')->pluck('nome','cod');
+            // return DB::table('produtos')->pluck('nome','cod');
+            return DB::table('users')->count();
+
         }
+
     }         
 
         

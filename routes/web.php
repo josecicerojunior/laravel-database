@@ -24,6 +24,11 @@ Route::get('/', function () {
     return view('produto');
 });
 
+Route::get('/models', function(){
+    $produtos = new App\Models\Painel\Produto;
+    return $produtos->get();
+});
+
 Route::get('produto/{id}/{nome}', function($id, $nome){
     return "produto {$id}, nome {$nome}";
 });
