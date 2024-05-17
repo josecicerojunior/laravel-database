@@ -40,8 +40,8 @@ class QueryBuilderController extends Controller
         // Realizando consulta no banco usando a faça
         public function consulta(){
         // return DB::table('users')->select('id', 'name', 'email')->get(); 
-        // Utilizando o método pluck para realizar consultas.
-            return DB::table('users')->pluck('name');
+        // Utilizando o método pluck para realizar consulta.
+            return DB::table('produtos')->pluck('nome','cod');
         }
     }         
 
